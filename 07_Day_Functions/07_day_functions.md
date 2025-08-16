@@ -706,3 +706,74 @@ It Will be covered in other section.
 🎉 CONGRATULATIONS ! 🎉
 
 [<< Day 6](../06_Day_Loops/06_day_loops.md) | [Day 8 >>](../08_Day_Objects/08_day_objects.md)
+
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+function sumAllNums() {
+ console.log(arguments)
+}
+
+sumAllNums(1, 2, 3, 4)
+
+//anonymous
+const f1 = function(){};
+//expression
+const s1 = function(){}
+let f2 = function(n){
+    console.log(n)
+}(10);
+
+
+const sum = (...args) => 
+{
+    let x= 0;
+    for(const val of args) 
+    console.log(x+=val);
+    return x;
+}
+
+//console.log(sum(1, 2, 3, 4) );
+
+
+{
+    function getUserIp()
+    {
+        return Array.from({ length: 4 }, () => Math.floor(Math.random() * 256)).join(".")
+    }
+    //console.log(getUserIp())
+    
+    function macip(){
+        return Array.from({length:6 },()=>{
+            return Math.floor(Math.random() * 256).toString(16).padStart(2,"0")
+        }).join(":");
+    }
+    
+    //console.log(macip())
+    const hexNum = () => {
+        return '#' + 
+            Math.floor(Math.random() * 0xFFFFFF).
+            toString(16).padStart(6,"0")
+    }
+   // console.log(hexNum())
+    
+    {
+        const sum = (arr) =>{
+            let x = 0;
+            for(const item of arr){
+                if(typeof item === "number")
+                    return "Please pass a number";
+                x+=item;
+            }
+            return x;
+        }
+        console.log(sum([1,2,'2']));
+        
+    }
+    {
+        
+    }
+}
+
+
